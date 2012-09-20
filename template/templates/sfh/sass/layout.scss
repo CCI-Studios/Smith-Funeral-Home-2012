@@ -1,0 +1,21 @@
+.container {
+	width: 940px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+#header {
+	height: 250px;
+	border-bottom: 5px solid $yellow;
+
+	.home & {
+		height: 345px;
+		background: url('../images/bg_header.jpg') top center no-repeat;
+	}
+
+	> div {
+		position: relative;
+		top: 50px;
+		background: url('../images/bg_menu.png') top center repeat-x;
+	}
+}

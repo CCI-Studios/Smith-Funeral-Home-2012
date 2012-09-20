@@ -67,68 +67,46 @@ $typekit = null;
 <body class="<?= $menu ?>">
 
 	<div id="wrapper">
-		<header>
+
+		<div id="header"><div><div class="container">
 			<jdoc:include type="modules" name="header" style="rounded" />
-		</header>
+		</div></div></div>
 
-		<div id="masthead">
-			<jdoc:include type="modules" name="masthead" style="rounded" />
-		</div>
-
-		<div id="prebody">
-			<jdoc:include type="modules" name="prebody" style="rounded" />
-		</div>
-
-		<div id="main">
+		<div class="container"><div id="main">
+			<jdoc:include type="message" />
 			<div id="content">
 				<?php if ($this->countModules('precontent')): ?>
 					<jdoc:include type="modules" name="precontent" style="rounded" />
 				<?php endif; ?>
 
-				<jdoc:include type="message" />
-
-				<article>
-					<jdoc:include type="component" />
-				</article>
+				<jdoc:include type="component" />
 
 				<?php if ($this->countModules('postcontent')): ?>
 					<jdoc:include type="modules" name="postcontent" style="rounded" />
 				<?php endif; ?>
 			</div>
-
 			<?php if ($this->countModules('sidebar1')): ?>
-				<aside>
-					<jdoc:include type="modules" name="sidebar1" style="rounded" />
-				</aside>
+			<div id="sidebar">
+				<jdoc:include type="modules" name="sidebar1" style="rounded" />
+			</div>
 			<?php endif; ?>
+			<div id="bottom">
 
-			<?php if ($this->countModules('sidebar2')): ?>
-				<aside>
-					<jdoc:include type="modules" name="sidebar2" style="rounded" />
-				</aside>
-			<?php endif; ?>
-		</div>
+			</div>
+		</div></div>
 
-		<div id="postbody">
-			<jdoc:include type="modules" name="postbody" style="rounded" />
-		</div>
-
-		<footer>
+		<div id="footer-menu"><div class="container">
+			<jdoc:include type="modules" name="footer-menu" style="xhtml" />
+		</div></div>
+		<div id="footer"><div class="container">
 			<jdoc:include type="modules" name="footer" style="xhtml" />
-		</footer>
-
-		<div id="copyright">
-			<div class="span4">
-				<p>Site by <a href="http://ccistudios.com" target="_blank">CCI Studios</a></p>
-			</div>
-			<div class="span4 offset4">
-				<p>Copyright &copy; <?php echo date('Y') ?></p>
-			</div>
-		</div>
-
+			<p>Site by <a href="http://ccistudios.com" target="_blank">CCI Studios</a></p>
+			<p>Copyright &copy; <?php echo date('Y') ?></p>
+		</div></div>
 		<div id="debug">
-			<jdoc:include type="debug" />
+			<jdoc:include type="modules" name="debug" style="xhtml" />
 		</div>
+
 	</div>
 
 	<div class="hidden">
