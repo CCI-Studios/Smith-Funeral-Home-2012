@@ -16,6 +16,15 @@ body, select, input, textarea {
 	*behavior: url(/templates/default/resources/boxsizing.htc); // IE7 only
 }
 
+@font-face {
+    font-family: 'VLADIMIR';
+    src: url('../resources/VLADIMIR.eot');
+    src: url('../resources/VLADIMIR.eot?#iefix') format('embedded-opentype'),
+         url('../resources/VLADIMIR.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
