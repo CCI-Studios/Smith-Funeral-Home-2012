@@ -1,4 +1,11 @@
 // @group modules
 .module {} // DO NOT TOUCH
-.module h3 {} // DO TOUCH
 
+.module h3 {
+	font-size: 18px;
+	font-weight: bold;
+	color: $navy;
+	text-shadow: 2px 2px 2px rgba(black, .22);
+	padding-bottom: 18px;
+	border-bottom: 1px solid $light-grey;
+}
