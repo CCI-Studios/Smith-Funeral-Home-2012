@@ -85,14 +85,15 @@ $typekit = null;
 					<jdoc:include type="modules" name="postcontent" style="rounded" />
 				<?php endif; ?>
 			</div>
-			<?php if ($this->countModules('sidebar1')): ?>
+			<?php if ($this->countModules('sidebar')): ?>
 			<div id="sidebar">
-				<jdoc:include type="modules" name="sidebar1" style="rounded" />
+				<jdoc:include type="modules" name="sidebar" style="rounded" />
 			</div>
 			<?php endif; ?>
 			<div id="bottom">
-
+				<jdoc:include type="modules" name="bottom" style="rounded" />
 			</div>
+			<div class="clear"></div>
 		</div></div>
 
 		<div id="footer-menu"><div class="container">
@@ -100,15 +101,15 @@ $typekit = null;
 		</div></div>
 		<div id="footer"><div class="container">
 			<jdoc:include type="modules" name="footer" style="xhtml" />
-			<p>Site by <a href="http://ccistudios.com" target="_blank">CCI Studios</a></p>
-			<p>Copyright &copy; <?php echo date('Y') ?></p>
+			<p>&copy; Smith Funeral Home &amp; Family Centre <?php echo date('Y') ?>. All Rights Reserved.<br/>
+			Site by <a href="http://ccistudios.com" target="_blank">CCI Studios</a></p>
 		</div></div>
 		<div id="debug">
 			<jdoc:include type="modules" name="debug" style="xhtml" />
 		</div>
 
 	</div>
-
+	<div class="clear"></div>
 	<div class="hidden">
 		<jdoc:include type="modules" name="hidden" style="raw" />
 	</div>
