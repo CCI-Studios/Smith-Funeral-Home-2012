@@ -37,6 +37,26 @@
 	}
 }
 
+
+.secondary-menu {
+	font-size: 12px;
+	text-align: center;
+	padding: 25px 0;
+
+	.menu > li {
+		padding: 0 7px;
+		border-left: 1px solid $navy;
+		line-height: 1em;
+		&:first-child {
+			border-left: none;
+		}
+	}
+
+	a {
+		color: $navy;
+	}
+}
+
 // @group vmenu
 .vmenu {
 
