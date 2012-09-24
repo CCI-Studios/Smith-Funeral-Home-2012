@@ -12,7 +12,7 @@
 
 .module.media-block {
 	float: left;
-	width: 310px;
+	width: 290px;
 	border: 1px solid $light-grey;
 	border-top-right-radius: 2px;
 	border-bottom-right-radius: 2px;
@@ -20,6 +20,15 @@
 	box-shadow: 1px 1px 1px rgba(black, .25);
 	background: url('../images/bg_mod-header.png') top left no-repeat;
 	margin-left: 35px;
+
+	.custom {
+		padding-left: 78px;
+		position: relative;
+	}
+
+	.home & {
+		width: 310px;
+	}
 
 	&:first-child {
 		margin-left: 0;
@@ -39,7 +48,17 @@
 	}
 
 	.media-image {
-		margin-right: 13px;
+		position: absolute;
 		@include image-border;
+		left: 0;
+	}
+
+	#sidebar & {
+		margin-left: 0;
+		margin-top: 20px;
+
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 }
