@@ -71,6 +71,9 @@
 		&:first-child {
 			border-left: none;
 		}
+		&.active {
+			font-weight: bold;
+		}
 	}
 
 	a {
