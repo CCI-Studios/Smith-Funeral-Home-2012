@@ -48,6 +48,10 @@ body {
 		width: 660px;
 		border-bottom: 1px solid $light-grey;
 	}
+
+	&.wide1 {
+		width: 100%;
+	}
 }
 
 #sidebar {
