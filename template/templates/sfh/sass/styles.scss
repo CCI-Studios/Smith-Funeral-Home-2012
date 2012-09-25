@@ -16,3 +16,10 @@
 .image-border {
 	@include image-border;
 }
+
+small a {
+	color: $light-navy;
+	&:hover {
+		text-decoration: none;
+	}
+}
