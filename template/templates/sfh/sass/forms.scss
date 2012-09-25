@@ -26,3 +26,11 @@ input:invalid, textarea:invalid {
 /* Make buttons play nice in IE:
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
 button {  width: auto; overflow: visible; }
+
+.chronoform {
+	display: none;
+}
+
+.ccms_form_element {
+	padding-left: 0;
+}
