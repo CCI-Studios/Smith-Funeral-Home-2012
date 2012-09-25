@@ -48,13 +48,28 @@
 		&:first-child {
 			padding-left: 0;
 		}
+
+		&:hover ul {
+			display: block;
+		}
 	}
 
-	a {
+	a, span {
 		color: #ffffff;
+		cursor: pointer;
 		&:hover {
 			color: $yellow;
 			text-decoration: none;
+		}
+	}
+
+	ul ul {
+		display: none;
+		background-color: $navy;
+		text-align: left;
+
+		li {
+			list-style: none;
 		}
 	}
 }
