@@ -376,60 +376,60 @@ body, select, input, textarea {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(/templates/default/resources/boxsizing.htc); }
-
-@font-face {
-  font-family: 'VLADIMIR';
-  src: url("../resources/VLADIMIR.eot");
-  src: url("../resources/VLADIMIR.eot?#iefix") format("embedded-opentype"), url("../resources/VLADIMIR.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  *behavior: url(/templates/sfh/resources/boxsizing.htc); }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  margin-top: 0; }
+  font-weight: bold; }
+  .module h1, .module h2, .module h3, .module h4, .module h5, .module h6 {
+    margin-top: 0; }
 
-.item-page h1 {
-  font-family: "VLADIMIR";
-  font-size: 32px;
+.item-page h1:first-child,
+.category-list h1 {
+  font-family: "bickham-script-pro", Helvetica, Arial, sans-serif;
+  font-size: 46px;
   font-weight: normal;
-  line-height: 1.15em;
+  line-height: 1em;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.15);
-  margin-top: -73px;
   border-bottom: 1px solid #dfe2e7;
   width: 940px;
-  padding: 5px 0 10px; }
-  .home .item-page h1 {
+  padding: 5px 0;
+  margin-top: -73px;
+  margin-bottom: 0; }
+  .home .item-page h1:first-child, .home
+  .category-list h1 {
     padding: 0;
-    margin-top: 0;
+    margin: 0;
     border-bottom: 0; }
 
 h1 {
-  font-size: 2em; }
+  font-size: 22px; }
 
 h2 {
-  font-size: 1.8em; }
+  font-size: 18px; }
 
 h3 {
-  font-size: 1.6em; }
+  font-size: 16px; }
 
 h4 {
-  font-size: 1.4em; }
+  font-size: 14px; }
 
 h5 {
-  font-size: 1.2em; }
+  font-size: 12px; }
 
 h6 {
-  font-size: 1.0em; }
+  font-size: 10px; }
 
 a, a:active, a:visited {
-  color: #ffd530;
+  color: #516780;
   text-decoration: none; }
 
 a:hover {
-  color: #ffd530;
+  color: #516780;
   text-decoration: underline; }
+
+ul {
+  padding-left: 20px; }
 
 /* forms */
 /* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
@@ -469,6 +469,12 @@ input:invalid, textarea:invalid {
 button {
   width: auto;
   overflow: visible; }
+
+.chronoform {
+  display: none; }
+
+.ccms_form_element {
+  padding-left: 0; }
 
 /*
 Grids should be setup using the following structure:
@@ -626,13 +632,17 @@ div.container
   .row-24 .span-24 {
     width: 940px; }
 
+body {
+  background-color: #0d243f; }
+
 .container {
   width: 960px;
   padding: 0 10px;
   margin: 0 auto; }
 
 #wrapper {
-  min-width: 960px; }
+  min-width: 960px;
+  background-color: white; }
 
 #header {
   height: 250px;
@@ -689,6 +699,13 @@ div.container
       color: #ffd530;
       text-decoration: none; }
 
+.category-list .cat-items {
+  padding-top: 1em; }
+.category-list .list-title {
+  display: block;
+  margin-bottom: 1em;
+  font-weight: bold; }
+
 .module h3 {
   font-size: 18px;
   font-weight: bold;
@@ -726,8 +743,9 @@ div.container
   .module.media-block .media-image {
     position: absolute;
     border: 1px solid #e5e5e5;
-    padding: 2px;
+    padding: 3px;
     background-color: #fff;
+    border-radius: 2px;
     left: 0; }
   #sidebar .module.media-block {
     margin-left: 0;
@@ -764,11 +782,20 @@ div.container
     padding: 0 0 0 35px; }
     .primary-menu .menu > li:first-child {
       padding-left: 0; }
-  .primary-menu a {
-    color: #ffffff; }
-    .primary-menu a:hover {
+    .primary-menu .menu > li:hover ul {
+      display: block; }
+  .primary-menu a, .primary-menu span {
+    color: #ffffff;
+    cursor: pointer; }
+    .primary-menu a:hover, .primary-menu span:hover {
       color: #ffd530;
       text-decoration: none; }
+  .primary-menu ul ul {
+    display: none;
+    background-color: #143356;
+    text-align: left; }
+    .primary-menu ul ul li {
+      list-style: none; }
 
 .secondary-menu {
   font-size: 12px;
@@ -820,8 +847,14 @@ div.container
 
 .image-border {
   border: 1px solid #e5e5e5;
-  padding: 2px;
-  background-color: #fff; }
+  padding: 3px;
+  background-color: #fff;
+  border-radius: 2px; }
+
+small a {
+  color: #516780; }
+  small a:hover {
+    text-decoration: none; }
 
 .phone-visible, .mobile-visible,
 .tablet-hidden, .desktop-hidden {
