@@ -13,16 +13,7 @@ body, select, input, textarea {
 	box-sizing: border-box;
 
 	// FIXME: Change this to the right path
-	*behavior: url(/templates/default/resources/boxsizing.htc); // IE7 only
-}
-
-@font-face {
-    font-family: 'VLADIMIR';
-    src: url('../resources/VLADIMIR.eot');
-    src: url('../resources/VLADIMIR.eot?#iefix') format('embedded-opentype'),
-         url('../resources/VLADIMIR.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	*behavior: url(/templates/sfh/resources/boxsizing.htc); // IE7 only
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
