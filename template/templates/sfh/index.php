@@ -73,7 +73,6 @@ $typekit = "amw0prm";
 		</div></div></div>
 
 		<div class="container"><div id="main">
-			<jdoc:include type="message" />
 			<div id="content" class="<?php
 							if (!$this->countModules('sidebar')) {
 								echo 'wide1';
@@ -84,6 +83,7 @@ $typekit = "amw0prm";
 				<?php if ($this->countModules('precontent')): ?>
 					<jdoc:include type="modules" name="precontent" style="rounded" />
 				<?php endif; ?>
+				<jdoc:include type="message" />
 
 				<jdoc:include type="component" />
 
