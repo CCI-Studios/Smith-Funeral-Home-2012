@@ -795,7 +795,7 @@ body {
     display: none;
     top: 29px;
     left: 20px;
-    background: url("../images/bg_menu.png") top center repeat;
+    background: url("../images/bg_dropdown-repeat.png") top center repeat;
     border-top: 4px solid #ffd530;
     text-align: left;
     padding: 7px 15px; }
