@@ -769,8 +769,6 @@ body {
   display: block; }
 .hmenu ul ul {
   position: absolute;
-  top: 100%;
-  left: 0;
   margin: 0;
   padding: 0; }
   .hmenu ul ul li {
@@ -781,7 +779,7 @@ body {
   text-align: center;
   margin-top: 13px; }
   .primary-menu .menu > li {
-    padding: 0 0 0 35px; }
+    padding: 0 0 11px 35px; }
     .primary-menu .menu > li:first-child {
       padding-left: 0; }
     .primary-menu .menu > li:hover ul {
@@ -793,11 +791,17 @@ body {
       color: #ffd530;
       text-decoration: none; }
   .primary-menu ul ul {
+    font-size: 12px;
     display: none;
-    background-color: #143356;
-    text-align: left; }
+    top: 29px;
+    left: 20px;
+    background: url("../images/bg_menu.png") top center repeat;
+    border-top: 4px solid #ffd530;
+    text-align: left;
+    padding: 7px 15px; }
     .primary-menu ul ul li {
-      list-style: none; }
+      list-style: none;
+      line-height: 28px; }
 
 .secondary-menu {
   font-size: 12px;
