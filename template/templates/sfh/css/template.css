@@ -890,6 +890,9 @@ div.catItemHeader h3.catItemTitle {
 div.catItemBody {
   padding: 0; }
 
+div.itemView {
+  border: 0; }
+
 div.itemList,
 div.itemBody {
   padding: 22px 0 1em 0; }
