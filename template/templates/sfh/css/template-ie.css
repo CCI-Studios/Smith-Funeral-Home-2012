@@ -678,7 +678,8 @@ body {
   width: 320px;
   padding-left: 30px;
   margin-top: 80px;
-  border-left: 1px solid #dfe2e7; }
+  border-left: 1px solid #dfe2e7;
+  min-height: 328px; }
   .home #sidebar {
     width: 250px;
     margin-top: 10px; }
