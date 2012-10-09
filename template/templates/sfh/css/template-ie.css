@@ -385,7 +385,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0; }
 
 .item-page h1:first-child,
-.category-list h1 {
+.category-list h1,
+h1.itemTitle {
   font-family: "bickham-script-pro", Helvetica, Arial, sans-serif;
   font-size: 46px;
   font-weight: normal;
@@ -396,7 +397,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 5px 0;
   margin: 0; }
   .home .item-page h1:first-child, .home
-  .category-list h1 {
+  .category-list h1, .home
+  h1.itemTitle {
     padding: 0;
     margin: 0;
     border-bottom: 0; }
@@ -678,7 +680,8 @@ body {
   margin-top: 80px;
   border-left: 1px solid #dfe2e7; }
   .home #sidebar {
-    width: 250px; }
+    width: 250px;
+    margin-top: 10px; }
 
 #bottom {
   float: left;
@@ -754,6 +757,16 @@ body {
     margin-top: 20px; }
     #sidebar .module.media-block:first-child {
       margin-top: 0; }
+
+div.k2ItemsBlock ul {
+  padding: 0;
+  margin: 0; }
+  div.k2ItemsBlock ul li {
+    list-style: none;
+    background: inherit;
+    border: none; }
+div.k2ItemsBlock a {
+  color: #143356; }
 
 .hmenu .menu {
   margin: 0;
@@ -861,6 +874,37 @@ small a {
   color: #516780; }
   small a:hover {
     text-decoration: none; }
+
+div.catItemView {
+  padding: 0 0 1em 0; }
+
+div.catItemHeader h3.catItemTitle {
+  font-size: 16px;
+  padding: 0; }
+  div.catItemHeader h3.catItemTitle a {
+    color: #143356; }
+    div.catItemHeader h3.catItemTitle a:hover {
+      text-decoration: underline; }
+
+div.catItemBody {
+  padding: 0; }
+
+div.itemList,
+div.itemBody {
+  padding: 22px 0 1em 0; }
+
+div.itemImageBlock {
+  padding: 0;
+  margin: 1em 0 1em 1em;
+  float: right; }
+
+div.k2Pagination li {
+  padding: 0 5px; }
+
+div.itemComments {
+  background: whitesmoke; }
+  div.itemComments ul.itemCommentsList li {
+    border: 0; }
 
 .phone-visible, .mobile-visible,
 .tablet-hidden, .desktop-hidden {
