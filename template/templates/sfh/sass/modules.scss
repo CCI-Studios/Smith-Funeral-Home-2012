@@ -62,3 +62,23 @@
 		}
 	}
 }
+
+//k2 module
+
+div.k2ItemsBlock {
+
+	ul {
+		padding: 0;
+		margin: 0;
+
+		li {
+			list-style: none;
+			background: inherit;
+			border: none;
+		}
+	}
+
+	a {
+		color: $navy;
+	}
+}
