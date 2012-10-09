@@ -1,0 +1,51 @@
+div.catItemView {
+	padding: 0 0 1em 0;
+}
+
+div.catItemHeader h3.catItemTitle {
+	font-size: 16px;
+	padding: 0;
+
+	a {
+		color: $navy;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+div.catItemBody {
+	padding: 0;
+}
+
+div.itemList,
+div.itemBody {
+	padding: 22px 0 1em 0;
+}
+
+div.itemImageBlock {
+	padding: 0;
+	margin: 1em 0 1em 1em;
+	float: right;
+}
+
+div.k2Pagination {
+	li {
+		padding: 0 5px;
+	}
+}
+
+
+//comments 
+
+div.itemComments {
+	background: whitesmoke;
+
+	ul.itemCommentsList {
+
+		li {
+			border: 0;
+		}
+	}
+
+}
