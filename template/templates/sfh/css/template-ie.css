@@ -905,6 +905,12 @@ div.itemImageBlock {
 div.k2Pagination li {
   padding: 0 5px; }
 
+span.itemImage img {
+  border: 1px solid #e5e5e5;
+  padding: 3px;
+  background-color: #fff;
+  border-radius: 2px; }
+
 div.itemComments {
   background: whitesmoke; }
   div.itemComments ul.itemCommentsList li {
