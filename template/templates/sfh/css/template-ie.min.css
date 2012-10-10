@@ -720,8 +720,13 @@ body {
   padding-bottom: 18px;
   border-bottom: 1px solid #dfe2e7; }
 
+#sidebar .module {
+  margin-left: 0;
+  margin-top: 20px; }
+  #sidebar .module:first-child {
+    margin-top: 0; }
+
 .module.media-block {
-  float: left;
   width: 290px;
   border: 1px solid #dfe2e7;
   border-top-right-radius: 2px;
@@ -734,7 +739,8 @@ body {
     padding-left: 78px;
     position: relative; }
   .home .module.media-block {
-    width: 310px; }
+    width: 310px;
+    float: left; }
   .module.media-block:first-child {
     margin-left: 0; }
   .module.media-block > div {
@@ -753,11 +759,6 @@ body {
     background-color: #fff;
     border-radius: 2px;
     left: 0; }
-  #sidebar .module.media-block {
-    margin-left: 0;
-    margin-top: 20px; }
-    #sidebar .module.media-block:first-child {
-      margin-top: 0; }
 
 div.k2ItemsBlock ul {
   padding: 0;
