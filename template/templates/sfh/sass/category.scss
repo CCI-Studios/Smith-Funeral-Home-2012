@@ -20,6 +20,11 @@ div.catItemBody {
 
 div.itemView {
 	border: 0;
+
+	h2 {
+		font-size: 16px;
+		margin: 1.5em 0 .5em;
+	}
 }
 
 div.itemList,
@@ -29,8 +34,8 @@ div.itemBody {
 
 div.itemImageBlock {
 	padding: 0;
-	margin: 1em 0 1em 1em;
-	float: right;
+	margin: 0em 1em 0em 0em;
+	float: left;
 }
 
 div.k2Pagination {
@@ -41,6 +46,23 @@ div.k2Pagination {
 
 span.itemImage img {
 	@include image-border;
+}
+
+h1.itemTitle {
+	margin: 0;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.itemDate {
+	color: $light-navy;
+	font-weight: bold;
+}
+
+.itemFullText {
+	p {
+		margin-top: 0;
+	}
 }
 
 
