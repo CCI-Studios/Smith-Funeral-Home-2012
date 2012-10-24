@@ -386,7 +386,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .item-page h1:first-child,
 .category-list h1,
-h1.itemTitle {
+.page-title h1:first-child {
   font-family: "bickham-script-pro", Helvetica, Arial, sans-serif;
   font-size: 46px;
   font-weight: normal;
@@ -398,10 +398,13 @@ h1.itemTitle {
   margin: 0; }
   .home .item-page h1:first-child, .home
   .category-list h1, .home
-  h1.itemTitle {
+  .page-title h1:first-child {
     padding: 0;
     margin: 0;
     border-bottom: 0; }
+
+.itemListView h1.itemTitle {
+  display: none; }
 
 h1 {
   font-size: 22px; }
@@ -705,13 +708,6 @@ body {
       color: #ffd530;
       text-decoration: none; }
 
-.category-list .cat-items {
-  padding-top: 1em; }
-.category-list .list-title {
-  display: block;
-  margin-bottom: 1em;
-  font-weight: bold; }
-
 .module h3 {
   font-size: 18px;
   font-weight: bold;
@@ -759,6 +755,30 @@ body {
     background-color: #fff;
     border-radius: 2px;
     left: 0; }
+
+.module.search-bar {
+  position: relative; }
+  .module.search-bar input[type="text"] {
+    width: 290px;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    padding: 6px 30px 6px 12px;
+    font-weight: lighter;
+    font-style: italic;
+    color: #b4b4b4; }
+    .module.search-bar input[type="text"]:focus {
+      font-style: normal;
+      font-weight: normal;
+      color: #143356; }
+  .module.search-bar button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-indent: -9999px;
+    background: url("../images/icon-search.png") center center no-repeat;
+    border: 0;
+    width: 28px;
+    height: 28px; }
 
 div.k2ItemsBlock ul {
   padding: 0;
@@ -893,6 +913,9 @@ div.catItemBody {
 
 div.itemView {
   border: 0; }
+  div.itemView h2 {
+    font-size: 16px;
+    margin: 1.5em 0 .5em; }
 
 div.itemList,
 div.itemBody {
@@ -900,8 +923,8 @@ div.itemBody {
 
 div.itemImageBlock {
   padding: 0;
-  margin: 1em 0 1em 1em;
-  float: right; }
+  margin: 0em 1em 0em 0em;
+  float: left; }
 
 div.k2Pagination li {
   padding: 0 5px; }
@@ -911,6 +934,18 @@ span.itemImage img {
   padding: 3px;
   background-color: #fff;
   border-radius: 2px; }
+
+h1.itemTitle {
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase; }
+
+.itemDate {
+  color: #516780;
+  font-weight: bold; }
+
+.itemFullText p {
+  margin-top: 0; }
 
 div.itemComments {
   background: whitesmoke; }
