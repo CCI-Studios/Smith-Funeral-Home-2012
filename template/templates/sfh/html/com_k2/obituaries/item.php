@@ -39,32 +39,6 @@ defined('_JEXEC') or die;
 		</span>
 		<?php endif; ?>
 
-	  <?php if($this->item->params->get('itemTitle')): ?>
-	  <!-- Item title -->
-	  <h1 class="itemTitle">
-			<?php if(isset($this->item->editLink)): ?>
-			<!-- Item edit link -->
-			<span class="itemEditLink">
-				<a class="modal" rel="{handler:'iframe',size:{x:990,y:550}}" href="<?php echo $this->item->editLink; ?>">
-					<?php echo JText::_('K2_EDIT_ITEM'); ?>
-				</a>
-			</span>
-			<?php endif; ?>
-
-	  	<?php echo $this->item->title; ?>
-
-	  	<?php if($this->item->params->get('itemFeaturedNotice') && $this->item->featured): ?>
-	  	<!-- Featured flag -->
-	  	<span>
-		  	<sup>
-		  		<?php echo JText::_('K2_FEATURED'); ?>
-		  	</sup>
-	  	</span>
-	  	<?php endif; ?>
-
-	  </h1>
-	  <?php endif; ?>
-
 		<?php if($this->item->params->get('itemAuthor')): ?>
 		<!-- Item Author -->
 		<span class="itemAuthor">
@@ -88,32 +62,7 @@ defined('_JEXEC') or die;
 
 
   <div class="itemBody">
-
-  	<?php if($this->item->params->get('itemExtraFields') && count($this->item->extra_fields)): ?>
-
-  		<!-- birth date -->
-	  	<?php if ($this->item->extra_fields[0]->value): ?>
-	  		<?= $this->item->extra_fields[0]->value ?> -
-	  	<?php endif; ?>
-
-	  	<!-- death date -->
-	  	<?php if ($this->item->extra_fields[1]->value): ?>
-	  		<?= $this->item->extra_fields[1]->value ?><br/>
-	  	<?php endif; ?>
-
-	  <!-- Item extra fields -->
-
-	<?php endif; ?>
-
-	  <!-- Plugins: BeforeDisplayContent -->
-	  <?php echo $this->item->event->BeforeDisplayContent; ?>
-
-	  <!-- K2 Plugins: K2BeforeDisplayContent -->
-	  <?php echo $this->item->event->K2BeforeDisplayContent; ?>
-
-	  <?php if($this->item->params->get('itemImage') && !empty($this->item->image)): ?>
-	  <!-- Item Image -->
-	  <div class="itemImageBlock">
+  	<div class="itemImageBlock">
 		  <span class="itemImage">
 		  	<a class="modal" rel="{handler: 'image'}" href="<?php echo $this->item->imageXLarge; ?>" title="<?php echo JText::_('K2_CLICK_TO_PREVIEW_IMAGE'); ?>">
 		  		<img src="<?php echo $this->item->image; ?>" alt="<?php if(!empty($this->item->image_caption)) echo K2HelperUtilities::cleanHtml($this->item->image_caption); else echo K2HelperUtilities::cleanHtml($this->item->title); ?>" style="width:<?php echo $this->item->imageWidth; ?>px; height:auto;" />
@@ -131,7 +80,58 @@ defined('_JEXEC') or die;
 		  <?php endif; ?>
 
 		  <div class="clr"></div>
-	  </div>
+	</div>
+
+	<?php if($this->item->params->get('itemTitle')): ?>
+	  <!-- Item title -->
+	  <h1 class="itemTitle">
+			<?php if(isset($this->item->editLink)): ?>
+			<!-- Item edit link -->
+			<span class="itemEditLink">
+				<a class="modal" rel="{handler:'iframe',size:{x:990,y:550}}" href="<?php echo $this->item->editLink; ?>">
+					<?php echo JText::_('K2_EDIT_ITEM'); ?>
+				</a>
+			</span>
+			<?php endif; ?>
+
+	  	<?php echo $this->item->title; ?>
+
+	  	<?php if($this->item->params->get('itemFeaturedNotice') && $this->item->featured): ?>
+	  	<!-- Featured flag -->
+	  	<span>
+		  	<sup>
+		  		<?php echo JText::_('K2_FEATURED'); ?>
+		  	</sup>
+	  	</span>
+	  	<?php endif; ?>
+
+	  </h1>
+	<?php endif; ?>
+
+  	<?php if($this->item->params->get('itemExtraFields') && count($this->item->extra_fields)): ?>
+  	<div class="itemDate">
+  		<!-- birth date -->
+	  	<?php if ($this->item->extra_fields[0]->value): ?>
+	  		<?= $this->item->extra_fields[0]->value ?> -
+	  	<?php endif; ?>
+
+	  	<!-- death date -->
+	  	<?php if ($this->item->extra_fields[1]->value): ?>
+	  		<?= $this->item->extra_fields[1]->value ?><br/>
+	  	<?php endif; ?>
+
+		<!-- Item extra fields -->
+	</div>
+	<?php endif; ?>
+
+	  <!-- Plugins: BeforeDisplayContent -->
+	  <?php echo $this->item->event->BeforeDisplayContent; ?>
+
+	  <!-- K2 Plugins: K2BeforeDisplayContent -->
+	  <?php echo $this->item->event->K2BeforeDisplayContent; ?>
+
+	  <?php if($this->item->params->get('itemImage') && !empty($this->item->image)): ?>
+	  <!-- Item Image -->
 	  <?php endif; ?>
 	  <h2>Death Notice</h2>
 	  <?php if(!empty($this->item->fulltext)): ?>
