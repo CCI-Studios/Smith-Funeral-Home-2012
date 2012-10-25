@@ -55,26 +55,6 @@ div.catItemImageBlock + div.catItemBody {
 	padding-left: 95px;
 }
 
-div.k2Pagination {
-	font-size: 12px;
-	font-weight: bold;
-	color: $navy;
-
-	ul {
-		margin-bottom: .5em;
-	}
-
-	li {
-		font-size: 14px;
-		padding: 0 5px;
-		color: $light-navy;
-
-		a {
-			color: $navy;
-		}
-	}
-}
-
 span.catItemImage img{
 	@include image-border-darker;
 }
