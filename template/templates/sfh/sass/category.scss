@@ -32,25 +32,59 @@ div.itemBody {
 	padding: 22px 0 1em 0;
 }
 
+div.catItemIntroText {
+	padding-top: 0;
+
+	p {
+		margin: .5em 0;
+	}
+}
+
+div.catItemImageBlock,
 div.itemImageBlock {
 	padding: 0;
 	margin: 0em 1em 0em 0em;
 	float: left;
 }
 
+div.catItemImageBlock + div.catItemBody {
+	padding-left: 95px;
+}
+
 div.k2Pagination {
+	font-size: 12px;
+	font-weight: bold;
+	color: $navy;
+
+	ul {
+		margin-bottom: .5em;
+	}
+
 	li {
+		font-size: 14px;
 		padding: 0 5px;
+		color: $light-navy;
+
+		a {
+			color: $navy;
+		}
 	}
 }
 
-span.itemImage img {
-	@include image-border;
+span.catItemImage img{
+	@include image-border-darker;
 }
 
-h1.itemTitle {
-	margin: 0;
+span.itemImage img {
+	@include image-border-darker;
+}
+
+h1.itemTitle,
+h3.catItemTitle {
+	font-family: Helvetica, Arial, sans-serif !important;
+	font-weight: bold !important;
 	font-size: 18px;
+	margin: 0;
 	text-transform: uppercase;
 }
 
