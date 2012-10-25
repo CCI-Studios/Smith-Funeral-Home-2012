@@ -16,7 +16,7 @@ body {
 #header {
 	height: 250px;
 	border-bottom: 5px solid $yellow;
-	background: url('../images/bg_header.jpg') top center no-repeat;
+	background: #0d223f url('../images/bg_header.jpg') top center no-repeat;
 
 	.home & {
 		height: 345px;
