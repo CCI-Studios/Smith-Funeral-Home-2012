@@ -13,6 +13,7 @@ defined('_JEXEC') or die;
 ?>
 
 <!-- Start K2 Category Layout -->
+<h2>Death Notice</h2>
 <div id="k2Container" class="itemListView<?php if($this->params->get('pageclass_sfx')) echo ' '.$this->params->get('pageclass_sfx'); ?>">
 
 	<?php if($this->params->get('show_page_title')): ?>
