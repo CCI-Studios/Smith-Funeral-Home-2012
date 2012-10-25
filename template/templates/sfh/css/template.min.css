@@ -406,6 +406,15 @@ h1, h2, h3, h4, h5, h6 {
 .itemListView h1.itemTitle {
   display: none; }
 
+h1.itemTitle,
+h3.catItemTitle,
+dt.result-title a {
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-weight: bold !important;
+  font-size: 18px;
+  margin: 0;
+  text-transform: uppercase; }
+
 h1 {
   font-size: 22px; }
 
@@ -708,7 +717,20 @@ body {
       color: #ffd530;
       text-decoration: none; }
 
-.module h3 {
+#search-form label {
+  display: none; }
+#search-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+dd.result-text {
+  margin: 0 0 2em; }
+
+.module.logo {
+  text-align: center; }
+
+.module.death-notices h3 {
   font-size: 18px;
   font-weight: bold;
   color: #143356;
@@ -756,20 +778,28 @@ body {
     border-radius: 2px;
     left: 0; }
 
+#search-form,
 .module.search-bar {
-  position: relative; }
+  margin: 22px 0 0; }
+  #search-form form,
+  .module.search-bar form {
+    position: relative;
+    width: 290px; }
+  #search-form input[type="text"],
   .module.search-bar input[type="text"] {
     width: 290px;
     border: 1px solid #d7d7d7;
     border-radius: 3px;
-    padding: 6px 30px 6px 12px;
+    padding: 5px 30px 5px 12px;
     font-weight: lighter;
     font-style: italic;
     color: #b4b4b4; }
+    #search-form input[type="text"]:focus,
     .module.search-bar input[type="text"]:focus {
       font-style: normal;
       font-weight: normal;
       color: #143356; }
+  #search-form button,
   .module.search-bar button {
     position: absolute;
     top: 0;
@@ -897,6 +927,9 @@ small a {
   small a:hover {
     text-decoration: none; }
 
+#k2Container {
+  padding-top: 5px; }
+
 div.catItemView {
   padding: 0 0 1em 0; }
 
@@ -961,14 +994,6 @@ span.itemImage img {
   padding: 3px;
   background-color: #fff;
   border-radius: 1px; }
-
-h1.itemTitle,
-h3.catItemTitle {
-  font-family: Helvetica, Arial, sans-serif !important;
-  font-weight: bold !important;
-  font-size: 18px;
-  margin: 0;
-  text-transform: uppercase; }
 
 .itemDate {
   color: #47668a;
