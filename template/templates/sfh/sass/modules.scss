@@ -5,13 +5,26 @@
 	text-align: center;
 }
 
-.module.death-notices h3 {
-	font-size: 18px;
-	font-weight: bold;
-	color: $navy;
-	text-shadow: 2px 2px 2px rgba(black, .22);
-	padding-bottom: 18px;
-	border-bottom: 1px solid $light-grey;
+.module.death-notices {
+
+	h3 {
+		font-size: 18px;
+		font-weight: bold;
+		color: $navy;
+		text-shadow: 2px 2px 2px rgba(black, .22);
+		padding-bottom: 18px;
+		border-bottom: 1px solid $light-grey;
+	}
+
+	li {
+		padding: 0;
+	}
+
+	.moduleCustomLink {
+		font-weight: bold;
+		margin-top: .5em;
+		display: block;
+	}
 }
 
 #sidebar .module {
