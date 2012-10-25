@@ -95,3 +95,23 @@ body {
 		}
 	}
 }
+
+
+//smart search results page layout
+
+#search-form {
+
+	label {
+		display: none;
+	}
+
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+dd.result-text {
+	margin: 0 0 2em;
+}
