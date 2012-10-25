@@ -1,7 +1,10 @@
 // @group modules
 .module {} // DO NOT TOUCH
 
-.module h3 {
+.module.logo {
+	text-align: center;
+}
+
 .module.death-notices h3 {
 	font-size: 18px;
 	font-weight: bold;
