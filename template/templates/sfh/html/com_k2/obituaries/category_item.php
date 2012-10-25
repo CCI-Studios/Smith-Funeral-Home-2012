@@ -24,7 +24,53 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	<!-- K2 Plugins: K2BeforeDisplay -->
 	<?php echo $this->item->event->K2BeforeDisplay; ?>
 
-	<div class="catItemHeader">
+	<?php if($this->item->params->get('catItemImage') && !empty($this->item->image)): ?>
+	  <!-- Item Image -->
+	  <div class="catItemImageBlock">
+		  <span class="catItemImage">
+		    <a href="<?php echo $this->item->link; ?>" title="<?php if(!empty($this->item->image_caption)) echo K2HelperUtilities::cleanHtml($this->item->image_caption); else echo K2HelperUtilities::cleanHtml($this->item->title); ?>">
+		    	<img src="<?php echo $this->item->image; ?>" alt="<?php if(!empty($this->item->image_caption)) echo K2HelperUtilities::cleanHtml($this->item->image_caption); else echo K2HelperUtilities::cleanHtml($this->item->title); ?>" style="width:<?php echo $this->item->imageWidth; ?>px; height:auto;" />
+		    </a>
+		  </span>
+		  <div class="clr"></div>
+	  </div>
+	<?php endif; ?>
+
+  <!-- Plugins: AfterDisplayTitle -->
+  <?php echo $this->item->event->AfterDisplayTitle; ?>
+
+  <!-- K2 Plugins: K2AfterDisplayTitle -->
+  <?php echo $this->item->event->K2AfterDisplayTitle; ?>
+
+	<?php if($this->item->params->get('catItemRating')): ?>
+	<!-- Item Rating -->
+	<div class="catItemRatingBlock">
+		<span><?php echo JText::_('K2_RATE_THIS_ITEM'); ?></span>
+		<div class="itemRatingForm">
+			<ul class="itemRatingList">
+				<li class="itemCurrentRating" id="itemCurrentRating<?php echo $this->item->id; ?>" style="width:<?php echo $this->item->votingPercentage; ?>%;"></li>
+				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_1_STAR_OUT_OF_5'); ?>" class="one-star">1</a></li>
+				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_2_STARS_OUT_OF_5'); ?>" class="two-stars">2</a></li>
+				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_3_STARS_OUT_OF_5'); ?>" class="three-stars">3</a></li>
+				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_4_STARS_OUT_OF_5'); ?>" class="four-stars">4</a></li>
+				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_5_STARS_OUT_OF_5'); ?>" class="five-stars">5</a></li>
+			</ul>
+			<div id="itemRatingLog<?php echo $this->item->id; ?>" class="itemRatingLog"><?php echo $this->item->numOfvotes; ?></div>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+	</div>
+	<?php endif; ?>
+
+  <div class="catItemBody">
+
+	  <!-- Plugins: BeforeDisplayContent -->
+	  <?php echo $this->item->event->BeforeDisplayContent; ?>
+
+	  <!-- K2 Plugins: K2BeforeDisplayContent -->
+	  <?php echo $this->item->event->K2BeforeDisplayContent; ?>
+
+	  	<div class="catItemHeader">
 		<?php if($this->item->params->get('catItemDateCreated')): ?>
 		<!-- Date created -->
 		<span class="catItemDateCreated">
@@ -63,6 +109,21 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	  </h3>
 	  <?php endif; ?>
 
+	  <?php if($this->item->params->get('catItemExtraFields') && count($this->item->extra_fields)): ?>
+	  <!-- Item extra fields -->
+		<div class="itemDate">
+		   	<!-- birth date -->
+		  	<?php if ($this->item->extra_fields[0]->value): ?>
+		  		<?= $this->item->extra_fields[0]->value ?> -
+		  	<?php endif; ?>
+
+		  	<!-- death date -->
+		  	<?php if ($this->item->extra_fields[1]->value): ?>
+		  		<?= $this->item->extra_fields[1]->value ?><br/>
+		  	<?php endif; ?>
+		 </div>
+	  <?php endif; ?>
+
 		<?php if($this->item->params->get('catItemAuthor')): ?>
 		<!-- Item Author -->
 		<span class="catItemAuthor">
@@ -76,52 +137,6 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 		<?php endif; ?>
   </div>
 
-  <!-- Plugins: AfterDisplayTitle -->
-  <?php echo $this->item->event->AfterDisplayTitle; ?>
-
-  <!-- K2 Plugins: K2AfterDisplayTitle -->
-  <?php echo $this->item->event->K2AfterDisplayTitle; ?>
-
-	<?php if($this->item->params->get('catItemRating')): ?>
-	<!-- Item Rating -->
-	<div class="catItemRatingBlock">
-		<span><?php echo JText::_('K2_RATE_THIS_ITEM'); ?></span>
-		<div class="itemRatingForm">
-			<ul class="itemRatingList">
-				<li class="itemCurrentRating" id="itemCurrentRating<?php echo $this->item->id; ?>" style="width:<?php echo $this->item->votingPercentage; ?>%;"></li>
-				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_1_STAR_OUT_OF_5'); ?>" class="one-star">1</a></li>
-				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_2_STARS_OUT_OF_5'); ?>" class="two-stars">2</a></li>
-				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_3_STARS_OUT_OF_5'); ?>" class="three-stars">3</a></li>
-				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_4_STARS_OUT_OF_5'); ?>" class="four-stars">4</a></li>
-				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_5_STARS_OUT_OF_5'); ?>" class="five-stars">5</a></li>
-			</ul>
-			<div id="itemRatingLog<?php echo $this->item->id; ?>" class="itemRatingLog"><?php echo $this->item->numOfvotes; ?></div>
-			<div class="clr"></div>
-		</div>
-		<div class="clr"></div>
-	</div>
-	<?php endif; ?>
-
-  <div class="catItemBody">
-
-	  <!-- Plugins: BeforeDisplayContent -->
-	  <?php echo $this->item->event->BeforeDisplayContent; ?>
-
-	  <!-- K2 Plugins: K2BeforeDisplayContent -->
-	  <?php echo $this->item->event->K2BeforeDisplayContent; ?>
-
-	  <?php if($this->item->params->get('catItemImage') && !empty($this->item->image)): ?>
-	  <!-- Item Image -->
-	  <div class="catItemImageBlock">
-		  <span class="catItemImage">
-		    <a href="<?php echo $this->item->link; ?>" title="<?php if(!empty($this->item->image_caption)) echo K2HelperUtilities::cleanHtml($this->item->image_caption); else echo K2HelperUtilities::cleanHtml($this->item->title); ?>">
-		    	<img src="<?php echo $this->item->image; ?>" alt="<?php if(!empty($this->item->image_caption)) echo K2HelperUtilities::cleanHtml($this->item->image_caption); else echo K2HelperUtilities::cleanHtml($this->item->title); ?>" style="width:<?php echo $this->item->imageWidth; ?>px; height:auto;" />
-		    </a>
-		  </span>
-		  <div class="clr"></div>
-	  </div>
-	  <?php endif; ?>
-
 	  <?php if($this->item->params->get('catItemIntroText')): ?>
 	  <!-- Item introtext -->
 	  <div class="catItemIntroText">
@@ -130,24 +145,6 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	  <?php endif; ?>
 
 		<div class="clr"></div>
-
-	  <?php if($this->item->params->get('catItemExtraFields') && count($this->item->extra_fields)): ?>
-	  <!-- Item extra fields -->
-	  <div class="catItemExtraFields">
-	  	<h4><?php echo JText::_('K2_ADDITIONAL_INFO'); ?></h4>
-	  	<ul>
-			<?php foreach ($this->item->extra_fields as $key=>$extraField): ?>
-			<?php if($extraField->value): ?>
-			<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
-				<span class="catItemExtraFieldsLabel"><?php echo $extraField->name; ?></span>
-				<span class="catItemExtraFieldsValue"><?php echo $extraField->value; ?></span>
-			</li>
-			<?php endif; ?>
-			<?php endforeach; ?>
-			</ul>
-	    <div class="clr"></div>
-	  </div>
-	  <?php endif; ?>
 
 	  <!-- Plugins: AfterDisplayContent -->
 	  <?php echo $this->item->event->AfterDisplayContent; ?>
