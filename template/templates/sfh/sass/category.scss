@@ -83,15 +83,6 @@ span.itemImage img {
 	@include image-border-darker;
 }
 
-h1.itemTitle,
-h3.catItemTitle {
-	font-family: Helvetica, Arial, sans-serif !important;
-	font-weight: bold !important;
-	font-size: 18px;
-	margin: 0;
-	text-transform: uppercase;
-}
-
 .itemDate {
 	color: $light-navy;
 	font-weight: bold;
