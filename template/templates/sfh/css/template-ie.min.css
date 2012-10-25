@@ -660,7 +660,7 @@ body {
 #header {
   height: 250px;
   border-bottom: 5px solid #ffd530;
-  background: url("../images/bg_header.jpg") top center no-repeat; }
+  background: #0d223f url("../images/bg_header.jpg") top center no-repeat; }
   .home #header {
     height: 345px; }
   #header > div {
@@ -727,6 +727,29 @@ body {
 dd.result-text {
   margin: 0 0 2em; }
 
+div.k2Pagination,
+div.search-pagination {
+  font-size: 12px;
+  font-weight: bold;
+  color: #143356;
+  text-align: center; }
+  div.k2Pagination ul,
+  div.search-pagination ul {
+    margin-bottom: .5em;
+    padding: 0; }
+  div.k2Pagination li,
+  div.search-pagination li {
+    list-style: none;
+    font-size: 14px;
+    padding: 0 5px;
+    color: #47668a;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1; }
+    div.k2Pagination li a,
+    div.search-pagination li a {
+      color: #143356; }
+
 .module.logo {
   text-align: center; }
 
@@ -737,6 +760,12 @@ dd.result-text {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.22);
   padding-bottom: 18px;
   border-bottom: 1px solid #dfe2e7; }
+.module.death-notices li {
+  padding: 0; }
+.module.death-notices .moduleCustomLink {
+  font-weight: bold;
+  margin-top: .5em;
+  display: block; }
 
 #sidebar .module {
   margin-left: 0;
@@ -807,8 +836,8 @@ dd.result-text {
     text-indent: -9999px;
     background: url("../images/icon-search.png") center center no-repeat;
     border: 0;
-    width: 28px;
-    height: 28px; }
+    width: 30px;
+    height: 30px; }
 
 div.k2ItemsBlock ul {
   padding: 0;
@@ -858,7 +887,7 @@ div.k2ItemsBlock a {
   .primary-menu ul ul {
     font-size: 12px;
     display: none;
-    top: 29px;
+    top: 25px;
     left: 20px;
     background: url("../images/bg_dropdown-repeat.png") top center repeat;
     border-top: 4px solid #ffd530;
@@ -967,19 +996,6 @@ div.itemImageBlock {
 
 div.catItemImageBlock + div.catItemBody {
   padding-left: 95px; }
-
-div.k2Pagination {
-  font-size: 12px;
-  font-weight: bold;
-  color: #143356; }
-  div.k2Pagination ul {
-    margin-bottom: .5em; }
-  div.k2Pagination li {
-    font-size: 14px;
-    padding: 0 5px;
-    color: #47668a; }
-    div.k2Pagination li a {
-      color: #143356; }
 
 span.catItemImage img {
   border: 1px solid #bdbdbd;
