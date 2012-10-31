@@ -40,6 +40,8 @@
 	font-size: 14px;
 	text-align: center;
 	margin-top: 13px;
+	position: relative;
+	z-index: 2; //keeps drop-down menu above content 
 
 	.menu > li {
 		padding: 0 0 11px 35px;
