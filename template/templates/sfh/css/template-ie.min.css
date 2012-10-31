@@ -395,7 +395,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #dfe2e7;
   width: 940px;
   padding: 5px 0;
-  margin: 0; }
+  margin: 0 0 22px 0; }
   .home .item-page h1:first-child, .home
   .category-list h1, .home
   .page-title h1:first-child {
@@ -405,6 +405,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .itemListView h1.itemTitle {
   display: none; }
+
+.item-page table h2 {
+  margin-bottom: 3px; }
+.item-page table + p {
+  margin-top: 5px; }
 
 h1.itemTitle,
 h3.catItemTitle,
@@ -871,7 +876,9 @@ div.k2ItemsBlock a {
 .primary-menu {
   font-size: 14px;
   text-align: center;
-  margin-top: 13px; }
+  margin-top: 13px;
+  position: relative;
+  z-index: 2; }
   .primary-menu .menu > li {
     padding: 0 0 11px 35px; }
     .primary-menu .menu > li:first-child {
@@ -951,6 +958,16 @@ div.k2ItemsBlock a {
   background-color: #fff;
   border-radius: 2px; }
 
+.image-border-darker {
+  border: 1px solid #bdbdbd;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  padding: 3px;
+  background-color: #fff;
+  border-radius: 1px; }
+
+.grey-underline {
+  border-bottom: 1px solid #dfe2e7; }
+
 small a {
   color: #47668a; }
   small a:hover {
@@ -1022,6 +1039,24 @@ div.itemComments {
   background: whitesmoke; }
   div.itemComments ul.itemCommentsList li {
     border: 0; }
+
+ul.sigProContainer {
+  margin-left: -13px !important; }
+  ul.sigProContainer li.sigProThumb {
+    margin: 0 0 11px 13px;
+    border: 1px solid #e5e5e5;
+    padding: 3px;
+    background-color: #fff;
+    border-radius: 2px; }
+    ul.sigProContainer li.sigProThumb .sigProLinkOuterWrapper {
+      background: none;
+      padding: 0 !important; }
+    ul.sigProContainer li.sigProThumb .sigProLinkWrapper {
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important; }
+    ul.sigProContainer li.sigProThumb img {
+      width: 190px; }
 
 .phone-visible, .mobile-visible,
 .tablet-hidden, .desktop-hidden {
