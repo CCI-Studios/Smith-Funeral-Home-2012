@@ -74,7 +74,14 @@ dt.result-title a {
 }
 
 h1 { font-size: 22px; }
-h2 { font-size: 18px; }
+h2 { 
+	font-size: 18px;
+	margin-bottom: 5px;
+
+	+ * {
+		margin-top: 0;
+	}
+}
 h3 { font-size: 16px; }
 h4 { font-size: 14px; }
 h5 { font-size: 12px; }
