@@ -1,0 +1,23 @@
+ul.sigProContainer {
+	margin-left: -13px !important;
+	
+	li.sigProThumb {
+		margin: 0 0 11px 13px;		
+		@include image-border;
+
+		.sigProLinkOuterWrapper {
+			background: none;
+			padding: 0 !important;
+		}
+
+		.sigProLinkWrapper {
+			margin: 0 !important;
+			padding: 0 !important;
+			border: 0 !important;
+		}
+
+		img {
+			width: 190px;
+		}
+	}
+}
