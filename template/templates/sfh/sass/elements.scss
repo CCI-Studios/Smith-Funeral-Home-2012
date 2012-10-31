@@ -49,6 +49,19 @@ h1, h2, h3, h4, h5, h6 {
 	display: none;
 }
 
+.item-page {
+
+	table {
+		h2 {
+			margin-bottom: 3px;
+		}
+		
+		& + p {
+		margin-top: 5px;
+		}
+	}
+}
+
 //k2 and smart search headers
 h1.itemTitle,
 h3.catItemTitle,
