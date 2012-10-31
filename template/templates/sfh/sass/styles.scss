@@ -1,3 +1,6 @@
+@import "_variables";
+@import "_mixins";
+
 // styles
 .clr, .clear { clear: both; }
 .left { float: left; }
@@ -15,6 +18,14 @@
 
 .image-border {
 	@include image-border;
+}
+
+.image-border-darker {
+	@include image-border-darker;
+}
+
+.grey-underline {
+	border-bottom: 1px solid $light-grey;
 }
 
 small a {
