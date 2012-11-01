@@ -44,3 +44,8 @@ small a {
   color: #47668a; }
   small a:hover {
     text-decoration: none; }
+
+input[type="submit"] {
+  padding: 8px 15px !important;
+  background-color: #143356;
+  color: #ffffff; }

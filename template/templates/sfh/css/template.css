@@ -825,6 +825,7 @@ div.search-pagination {
   #search-form input[type="text"],
   .module.search-bar input[type="text"] {
     width: 290px;
+    height: 30px;
     border: 1px solid #d7d7d7;
     border-radius: 3px;
     padding: 5px 30px 5px 12px;
@@ -906,6 +907,8 @@ div.k2ItemsBlock a {
     .primary-menu ul ul li {
       list-style: none;
       line-height: 28px; }
+    .primary-menu ul ul a {
+      display: block; }
 
 .secondary-menu {
   font-size: 12px;
@@ -975,6 +978,11 @@ small a {
   color: #47668a; }
   small a:hover {
     text-decoration: none; }
+
+input[type="submit"] {
+  padding: 8px 15px !important;
+  background-color: #143356;
+  color: #ffffff; }
 
 #k2Container {
   padding-top: 5px; }
