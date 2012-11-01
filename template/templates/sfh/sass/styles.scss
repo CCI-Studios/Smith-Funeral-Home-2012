@@ -34,3 +34,9 @@ small a {
 		text-decoration: none;
 	}
 }
+
+input[type="submit"] {
+	padding: 8px 15px !important;
+	background-color: $navy;
+	color: #ffffff;
+}
