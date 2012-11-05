@@ -40,8 +40,6 @@
 	font-size: 14px;
 	text-align: center;
 	margin-top: 13px;
-	position: relative;
-	z-index: 2; //keeps drop-down menu above content 
 
 	.menu > li {
 		padding: 0 0 11px 35px;
@@ -57,6 +55,7 @@
 	a, span {
 		color: #ffffff;
 		cursor: pointer;
+		*zoom: 1;
 		&:hover {
 			color: $yellow;
 			text-decoration: none;
@@ -72,6 +71,10 @@
 		border-top: 4px solid $yellow;
 		text-align: left;
 		padding: 7px 15px;
+
+		.ie7 & {
+			top: 29px;
+		}
 
 		li {
 			list-style: none;
