@@ -17,6 +17,8 @@ body {
 	height: 250px;
 	border-bottom: 5px solid $yellow;
 	background: #0d223f url('../images/bg_header.jpg') top center no-repeat;
+	position: relative;
+	z-index: 1000; //puts menu above content
 
 	.home & {
 		height: 345px;
