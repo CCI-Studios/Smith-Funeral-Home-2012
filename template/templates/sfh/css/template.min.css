@@ -409,7 +409,8 @@ h1, h2, h3, h4, h5, h6 {
 .item-page table h2 {
   margin-bottom: 3px; }
 .item-page table + p {
-  margin-top: 5px; }
+  margin-top: 5px;
+  *zoom: 1; }
 
 h1.itemTitle,
 h3.catItemTitle,
@@ -668,7 +669,9 @@ body {
 #header {
   height: 250px;
   border-bottom: 5px solid #ffd530;
-  background: #0d223f url("../images/bg_header.jpg") top center no-repeat; }
+  background: #0d223f url("../images/bg_header.jpg") top center no-repeat;
+  position: relative;
+  z-index: 1000; }
   .home #header {
     height: 345px; }
   #header > div {
@@ -832,6 +835,10 @@ div.search-pagination {
     font-weight: lighter;
     font-style: italic;
     color: #b4b4b4; }
+    .ie7 #search-form input[type="text"], .ie7
+    .module.search-bar input[type="text"] {
+      color: #143356;
+      font-style: normal; }
     #search-form input[type="text"]:focus,
     .module.search-bar input[type="text"]:focus {
       font-style: normal;
@@ -880,9 +887,7 @@ div.k2ItemsBlock a {
 .primary-menu {
   font-size: 14px;
   text-align: center;
-  margin-top: 13px;
-  position: relative;
-  z-index: 2; }
+  margin-top: 13px; }
   .primary-menu .menu > li {
     padding: 0 0 11px 35px; }
     .primary-menu .menu > li:first-child {
@@ -891,7 +896,8 @@ div.k2ItemsBlock a {
       display: block; }
   .primary-menu a, .primary-menu span {
     color: #ffffff;
-    cursor: pointer; }
+    cursor: pointer;
+    *zoom: 1; }
     .primary-menu a:hover, .primary-menu span:hover {
       color: #ffd530;
       text-decoration: none; }
@@ -904,6 +910,8 @@ div.k2ItemsBlock a {
     border-top: 4px solid #ffd530;
     text-align: left;
     padding: 7px 15px; }
+    .ie7 .primary-menu ul ul {
+      top: 29px; }
     .primary-menu ul ul li {
       list-style: none;
       line-height: 28px; }
@@ -1007,8 +1015,7 @@ div.itemView {
     font-size: 16px;
     margin: 1.5em 0 .5em; }
 
-div.itemList,
-div.itemBody {
+div.itemList {
   padding: 22px 0 1em 0; }
 
 div.catItemIntroText {
@@ -1046,6 +1053,9 @@ span.itemImage img {
 .itemFullText p {
   margin-top: 0; }
 
+dt.result-title a {
+  color: #143356; }
+
 div.itemComments {
   background: whitesmoke; }
   div.itemComments ul.itemCommentsList li {
@@ -1068,6 +1078,9 @@ ul.sigProContainer {
       border: 0 !important; }
     ul.sigProContainer li.sigProThumb img {
       width: 190px; }
+
+#lbCenter {
+  overflow: visible !important; }
 
 .phone-visible, .mobile-visible,
 .tablet-hidden, .desktop-hidden {
