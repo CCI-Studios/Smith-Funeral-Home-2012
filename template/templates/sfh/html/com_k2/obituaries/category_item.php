@@ -144,7 +144,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	  </div>
 	  <?php endif; ?>
 
-		<div class="clr"></div>
+		<!-- <div class="clr"></div> -->
 
 	  <!-- Plugins: AfterDisplayContent -->
 	  <?php echo $this->item->event->AfterDisplayContent; ?>
@@ -152,7 +152,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	  <!-- K2 Plugins: K2AfterDisplayContent -->
 	  <?php echo $this->item->event->K2AfterDisplayContent; ?>
 
-	  <div class="clr"></div>
+	  <!-- <div class="clr"></div> -->
   </div>
 
   <?php if(
@@ -216,7 +216,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
   </div>
   <?php endif; ?>
 
-	<div class="clr"></div>
+	<!-- <div class="clr"></div> -->
 
   <?php if($this->item->params->get('catItemVideo') && !empty($this->item->video)): ?>
   <!-- Item video -->
@@ -240,7 +240,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
   </div>
   <?php endif; ?>
 
-  <div class="clr"></div>
+  <!-- <div class="clr"></div> -->
 
 	<?php if($this->item->params->get('catItemCommentsAnchor') && ( ($this->item->params->get('comments') == '2' && !$this->user->guest) || ($this->item->params->get('comments') == '1')) ): ?>
 	<!-- Anchor link to comments below -->
@@ -271,7 +271,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	</div>
 	<?php endif; ?>
 
-	<div class="clr"></div>
+	<!-- <div class="clr"></div> -->
 
 	<?php if($this->item->params->get('catItemDateModified')): ?>
 	<!-- Item date modified -->
@@ -288,6 +288,6 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
   <!-- K2 Plugins: K2AfterDisplay -->
   <?php echo $this->item->event->K2AfterDisplay; ?>
 
-	<div class="clr"></div>
+	<!-- <div class="clr"></div> -->
 </div>
 <!-- End K2 Item Layout -->

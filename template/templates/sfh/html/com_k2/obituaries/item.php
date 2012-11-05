@@ -154,7 +154,7 @@ defined('_JEXEC') or die;
 	  </div>
 	  <?php endif; ?>
 
-		<div class="clr"></div>
+		<!-- <div class="clr"></div> -->
 
 	  <?php if($this->item->params->get('itemExtraFields') && count($this->item->extra_fields)): ?>
 
@@ -181,7 +181,7 @@ defined('_JEXEC') or die;
 	  <!-- K2 Plugins: K2AfterDisplayContent -->
 	  <?php echo $this->item->event->K2AfterDisplayContent; ?>
 
-	  <div class="clr"></div>
+	  <!-- <div class="clr"></div> -->
   </div>
 
   <?php if($this->item->params->get('itemCategory') || $this->item->params->get('itemTags') || $this->item->params->get('itemAttachments')): ?>
