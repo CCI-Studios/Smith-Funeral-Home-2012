@@ -1079,9 +1079,6 @@ ul.sigProContainer {
     ul.sigProContainer li.sigProThumb img {
       width: 190px; }
 
-#lbCenter {
-  overflow: visible !important; }
-
 .phone-visible, .mobile-visible,
 .tablet-hidden, .desktop-hidden {
   display: block; }
