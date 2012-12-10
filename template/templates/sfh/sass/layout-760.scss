@@ -1,0 +1,19 @@
+#content {
+	width: 61.458333333%; //590px
+
+	.home & {
+		width: 68.75%; //660px
+	}
+}
+
+#sidebar {
+	float: right;
+	padding-left: 30px;
+	width: 33.333333333%; //320px
+	border-left: 1px solid $light-grey;
+
+	.home & {
+		width: 26.041666667%; //250px
+		margin-top: 10px;
+	}
+}
