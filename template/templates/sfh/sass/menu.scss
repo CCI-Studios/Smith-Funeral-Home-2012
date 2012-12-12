@@ -122,3 +122,39 @@
 		list-style: none;
 	}
 }
+
+.mobile-menu {
+	max-height: 800px;
+	overflow: hidden;
+	font-size: 1.142857143em;
+	line-height: 2em;
+	@include transition(max-height .3s ease-in-out);
+
+	&.menu-close {
+		max-height: 0 !important;
+		overflow: visible;
+	}
+
+	a,
+	span {
+		color: white;
+		&:hover {
+			color: $yellow;
+			text-decoration: none;
+		}
+	}
+
+	.menu {
+		padding: 1em 0;
+
+		li {
+			list-style: none;
+		}
+	}
+
+	.menu ul {
+		padding-left: 3%;
+		margin: 0 0 0 3%;
+		border-left: 2px solid $beige;
+	}
+}
