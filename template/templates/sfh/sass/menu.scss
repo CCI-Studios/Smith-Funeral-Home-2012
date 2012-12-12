@@ -127,12 +127,16 @@
 	max-height: 800px;
 	overflow: hidden;
 	font-size: 1.142857143em;
-	line-height: 2em;
+	line-height: 2.375em;
 	@include transition(max-height .3s ease-in-out);
+	position: relative;
+	z-index: 1;
 
 	&.menu-close {
 		max-height: 0 !important;
 		overflow: visible;
+		position: relative;
+		z-index: -1;
 	}
 
 	a,
