@@ -66,6 +66,10 @@ $typekit = "amw0prm";
 
 <body class="<?= $menu ?>">
 
+	<div id="mobile-menu" class="desktop-hidden menu-close"><div class="container">
+		<jdoc:include type="modules" name="mobile-menu" style="rounded" />
+	</div></div>
+
 	<div id="wrapper">
 
 		<div id="header"><div><div class="container">
