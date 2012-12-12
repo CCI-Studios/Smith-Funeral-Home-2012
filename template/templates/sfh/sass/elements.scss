@@ -99,3 +99,12 @@ a:hover {
 ul {
 	padding-left: 20px;
 }
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	.ie8 & {
+		width: auto;
+	}
+}
