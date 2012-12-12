@@ -1,6 +1,7 @@
 /**
  * @codekit-prepend "columns.js"
  * @codekit-prepend "dropmenu.js"
+ * @codekit-prepend "menu.js"
  * @codekit-prepend "lettering.js"
  * @codekit-prepend "html5.js"
  * @codekit-prepend "rollover.js"
@@ -17,5 +18,5 @@ window.addEvent('domready', function() {
 
 window.addEvent('load', function () {
 	// columns
-	// new CCI.Columns($('bottom'), '.module > div > div');
+	new CCI.Columns($('bottom'), '.module.media-block .custom');
 });

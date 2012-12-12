@@ -700,7 +700,9 @@ body {
     padding-top: 20px; }
 
 #content {
-  overflow: auto; }
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
   .home #content {
     font-size: 16px; }
   #content.wide1 {
@@ -949,15 +951,19 @@ div.k2ItemsBlock a {
   max-height: 800px;
   overflow: hidden;
   font-size: 1.142857143em;
-  line-height: 2em;
+  line-height: 2.375em;
   -webkit-transition: max-height 0.3s ease-in-out;
   -moz-transition: max-height 0.3s ease-in-out;
   -o-transition: max-height 0.3s ease-in-out;
   -ms-transition: max-height 0.3s ease-in-out;
-  transition: max-height 0.3s ease-in-out; }
+  transition: max-height 0.3s ease-in-out;
+  position: relative;
+  z-index: 1; }
   .mobile-menu.menu-close {
     max-height: 0 !important;
-    overflow: visible; }
+    overflow: visible;
+    position: relative;
+    z-index: -1; }
   .mobile-menu a,
   .mobile-menu span {
     color: white; }
@@ -1137,10 +1143,13 @@ div.itemComments {
     border: 0; }
 
 ul.sigProContainer {
-  margin-left: -3% !important; }
+  text-align: center; }
   ul.sigProContainer li.sigProThumb {
-    width: 47%;
-    margin: 0 0 11px 3%;
+    margin: 0 1% 11px;
+    float: none;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
     border: 1px solid #e5e5e5;
     padding: 3px;
     background-color: #fff;
@@ -1172,10 +1181,7 @@ ul.sigProContainer {
 
   .phone-visible, .desktop-visible,
   .tablet-hidden, .mobile-hidden {
-    display: none; }
-
-  ul.sigProContainer li.sigProThumb {
-    width: 30.333333333%; } }
+    display: none; } }
 @media only screen and (min-width: 760px) {
   .item-page h1:first-child,
   .category-list h1,
@@ -1188,8 +1194,7 @@ ul.sigProContainer {
   #content {
     float: left;
     width: 63.541666667%;
-    margin-right: 3.125%;
-    overflow: inherit; }
+    margin-right: 3.125%; }
     .home #content {
       width: 70.833333333%;
       border-bottom: 1px solid #dfe2e7; }
@@ -1208,13 +1213,13 @@ ul.sigProContainer {
       margin-top: 10px;
       border-bottom: 0; }
 
-  #bottom {
-    margin-left: -3.64583%; }
-    .home #bottom {
-      width: 73.958333333%; }
+  .home #bottom {
+    width: 73.958333333%; }
 
   .module.media-block {
     margin: 0 0 0 3.645833333%; }
+    .module.media-block:first-child {
+      margin-left: 0; }
     .home .module.media-block {
       width: 46.354166667%; }
 
