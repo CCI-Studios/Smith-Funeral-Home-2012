@@ -76,7 +76,7 @@ $typekit = "amw0prm";
 			<jdoc:include type="modules" name="header" style="rounded" />
 		</div></div></div>
 
-		<div class="container"><div id="main">
+		<div class="container overflow-hidden"><div id="main">
 			<div id="content" class="<?php
 							if (!$this->countModules('sidebar')) {
 								echo 'wide1';
