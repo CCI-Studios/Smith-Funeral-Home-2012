@@ -1,19 +1,40 @@
+#header {
+	background-size: inherit;
+}
+
 #content {
-	width: 61.458333333%; //590px
+	float: left;
+	width: 63.541666667%; //610px
+	margin-right: 3.125%;
+	overflow: inherit;
 
 	.home & {
-		width: 68.75%; //660px
+		width: 70.833333333%; //680px
+		border-bottom: 1px solid $light-grey;
 	}
 }
 
 #sidebar {
 	float: right;
 	padding-left: 30px;
+	padding-top: 0;
+	margin: 80px 0 0;
 	width: 33.333333333%; //320px
+	min-height: 328px;
 	border-left: 1px solid $light-grey;
+	border-top: 0;
 
 	.home & {
 		width: 26.041666667%; //250px
 		margin-top: 10px;
+		border-bottom: 0;
+	}
+}
+
+#bottom {
+	margin-left: -3.645833333%;
+
+	.home & {
+		width: 73.958333333%;
 	}
 }
