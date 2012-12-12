@@ -1,6 +1,10 @@
 .module.media-block {
 	margin: 0 0 0 3.645833333%;
 
+	&:first-child {
+		margin-left: 0;
+	}
+
 	.home & {
 		width: 46.354166667%; //310px
 	}
