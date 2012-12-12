@@ -37,14 +37,13 @@
 }
 
 .module.media-block {
-	width: 290px;
 	border: 1px solid $light-grey;
 	border-top-right-radius: 2px;
 	border-bottom-right-radius: 2px;
 	border-bottom-left-radius: 2px;
 	box-shadow: 1px 1px 1px rgba(black, .25);
 	background: url('../images/bg_mod-header.png') top left no-repeat;
-	margin-left: 35px;
+	margin-top: 2em;
 
 	.custom {
 		padding-left: 78px;
@@ -52,17 +51,17 @@
 	}
 
 	.home & {
-		width: 310px;
 		float: left;
 	}
 
 	&:first-child {
-		margin-left: 0;
+		margin-top: 0;
 	}
 
 	> div {
 		padding: 15px 13px;
 		border-bottom: 4px solid $yellow;
+		min-height: 145px;
 	}
 
 	h3 {
