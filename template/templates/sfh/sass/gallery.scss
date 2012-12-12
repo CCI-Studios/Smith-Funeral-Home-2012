@@ -1,9 +1,12 @@
 ul.sigProContainer {
-	margin-left: -3% !important;
+	text-align: center;
 	
 	li.sigProThumb {
-		width: 47%;
-		margin: 0 0 11px 3%;	//11px 13px
+		margin: 0 1% 11px;	//11px 13px
+		float: none;
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
 		@include image-border;
 
 		.sigProLinkOuterWrapper {
