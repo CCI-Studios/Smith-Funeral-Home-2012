@@ -51,7 +51,9 @@ body {
 }
 
 #content {
-	overflow: auto;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
 
 	.home & {
 		font-size: 16px;
