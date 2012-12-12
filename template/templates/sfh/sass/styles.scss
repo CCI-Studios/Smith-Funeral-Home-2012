@@ -41,3 +41,15 @@ input[type="submit"] {
 	background-color: $navy;
 	color: #ffffff;
 }
+
+.btn-navbar {
+	@include btn-navbar;
+}
+
+.btn-navbar .icon-bar {
+	@include icon-bar;
+
+	& + .icon-bar {
+		margin-top: 3px;
+	}
+}
