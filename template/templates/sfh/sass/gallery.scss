@@ -1,8 +1,9 @@
 ul.sigProContainer {
-	margin-left: -13px !important;
+	margin-left: -3% !important;
 	
 	li.sigProThumb {
-		margin: 0 0 11px 13px;		
+		width: 47%;
+		margin: 0 0 11px 3%;	//11px 13px
 		@include image-border;
 
 		.sigProLinkOuterWrapper {
@@ -14,6 +15,10 @@ ul.sigProContainer {
 			margin: 0 !important;
 			padding: 0 !important;
 			border: 0 !important;
+		}
+
+		.sigProLink {
+			width: auto !important;
 		}
 
 		img {
