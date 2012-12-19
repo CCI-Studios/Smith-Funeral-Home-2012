@@ -23,7 +23,7 @@ JHtml::core();
 <div class="system-unpublished">
 <?php endif; ?>
 <?php if ($params->get('show_title')) : ?>
-	<h1>
+	<h1 class="accordian-title">
 		<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 			<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
 			<?php echo $this->escape($this->item->title); ?></a>
@@ -32,7 +32,7 @@ JHtml::core();
 		<?php endif; ?>
 	</h1>
 <?php endif; ?>
-
+<div class="accordian-content">
 <?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
 	<ul class="actions">
 		<?php if ($params->get('show_print_icon')) : ?>
@@ -161,6 +161,6 @@ JHtml::core();
 <?php if ($this->item->state == 0) : ?>
 </div>
 <?php endif; ?>
-
+</div>
 <div class="item-separator"></div>
 <?php echo $this->item->event->afterDisplayContent; ?>

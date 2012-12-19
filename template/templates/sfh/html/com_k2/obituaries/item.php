@@ -352,11 +352,7 @@ defined('_JEXEC') or die;
 	    <?php foreach ($this->item->comments as $key=>$comment): ?>
 	    <li class="<?php echo ($key%2) ? "odd" : "even"; echo (!$this->item->created_by_alias && $comment->userID==$this->item->created_by) ? " authorResponse" : ""; echo($comment->published) ? '':' unpublishedComment'; ?>">
 
-				<span class="commentDate">
-		    	<?php echo JHTML::_('date', $comment->commentDate, JText::_('K2_DATE_FORMAT_LC2')); ?>
-		    </span>
-
-		    <span class="commentAuthorName">
+			<span class="commentAuthorName">
 			    <?php echo JText::_('K2_POSTED_BY'); ?>
 			    <?php if(!empty($comment->userLink)): ?>
 			    <a href="<?php echo JFilterOutput::cleanText($comment->userLink); ?>" title="<?php echo JFilterOutput::cleanText($comment->userName); ?>" target="_blank" rel="nofollow">
@@ -365,6 +361,10 @@ defined('_JEXEC') or die;
 			    <?php else: ?>
 			    <?php echo $comment->userName; ?>
 			    <?php endif; ?>
+		    </span>
+
+			<span class="commentDate">
+		    	<?php echo JHTML::_('date', $comment->commentDate, JText::_('K2_DATE_FORMAT_LC2')); ?>
 		    </span>
 
 		    <p><?php echo $comment->commentText; ?></p>
