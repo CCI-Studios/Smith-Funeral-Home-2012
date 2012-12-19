@@ -127,9 +127,10 @@ $typekit = "amw0prm";
 	<!-- load scripts -->
 	<?php if ($testing): ?>
 		<script src="/templates/<?= $this->template ?>/js/columns.js"></script>
+		<script src="/templates/<?= $this->template ?>/js/menu.js"></script>
+		<script src="/templates/<?= $this->template ?>/js/accordian.js"></script>
 		<script src="/templates/<?= $this->template ?>/js/dropmenu.js"></script>
 		<script src="/templates/<?= $this->template ?>/js/html5.js"></script>
-		<script src="/templates/<?= $this->template ?>/js/menu.js"></script>
 		<script src="/templates/<?= $this->template ?>/js/lettering.js"></script>
 		<script src="/templates/<?= $this->template ?>/js/rollover.js"></script>
 	<?php else: ?>
