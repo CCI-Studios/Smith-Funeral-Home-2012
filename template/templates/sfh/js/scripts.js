@@ -1,7 +1,8 @@
 /**
  * @codekit-prepend "columns.js"
- * @codekit-prepend "dropmenu.js"
  * @codekit-prepend "menu.js"
+ * @codekit-prepend "accordian.js"
+ * @codekit-prepend "dropmenu.js"
  * @codekit-prepend "lettering.js"
  * @codekit-prepend "html5.js"
  * @codekit-prepend "rollover.js"
