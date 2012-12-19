@@ -27,6 +27,20 @@ input:invalid, textarea:invalid {
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
 button {  width: auto; overflow: visible; }
 
+input, 
+textarea {
+	padding: 4px;
+	border: 1px solid lightGrey;
+}
+
+input[type="submit"],
+div.itemCommentsForm form input#submitCommentButton {
+	padding: 8px 15px !important;
+	background-color: $navy;
+	color: #ffffff;
+}
+
+//choroforms
 .chronoform {
 	display: none;
 }
@@ -36,5 +50,55 @@ button {  width: auto; overflow: visible; }
 
 	textarea {
 		width: 100%;
+	}
+}
+
+//k2 comment
+div.itemComments {
+	background: none !important;
+	border: 0;
+	padding: 0;
+
+	label {
+		font-weight: bold;
+		margin: 12px 0 6px !important;
+		line-height: 18px;
+	}
+
+	ul.itemCommentsList {
+		li.authorResponse {
+			background: none;
+			padding: 0;
+
+			p {
+				margin-top: 0;
+			}
+		}
+
+		span.commentDate {
+			border-left: 1px solid #CCC;
+			border-right: none !important;
+			padding: 0 0 0 4px !important;
+		}
+	}
+
+	form {
+
+		input.inputbox,
+		textarea.inputbox {
+			width: 100%;
+			max-width: 350px;
+		}
+
+		textarea.inputbox {
+			max-width: 500px;
+		}
+
+		span#formLog {
+			color: $navy;
+			display: block;
+			margin: 20px 0 0;
+			padding: 0;
+		}
 	}
 }
