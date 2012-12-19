@@ -80,6 +80,16 @@ dt.result-title {
 	}
 }
 
+//services
+
+.accordian-title {
+	cursor: pointer;
+	margin-bottom: 0;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
 
 //comments 
 
