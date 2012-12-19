@@ -27,7 +27,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .item-page h1:first-child,
 .category-list h1,
-.page-title h1:first-child {
+.page-title h1:first-child,
+.blog > h1:first-child {
 	font-family: "bickham-script-pro", Helvetica, Arial, sans-serif;
 	font-size: 46px;
 	font-weight: normal;
