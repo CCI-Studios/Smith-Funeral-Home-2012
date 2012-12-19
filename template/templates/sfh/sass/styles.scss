@@ -36,12 +36,6 @@ small a {
 	}
 }
 
-input[type="submit"] {
-	padding: 8px 15px !important;
-	background-color: $navy;
-	color: #ffffff;
-}
-
 .btn-navbar {
 	@include btn-navbar;
 }
