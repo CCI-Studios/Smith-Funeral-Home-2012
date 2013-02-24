@@ -55,7 +55,7 @@ $typekit = "amw0prm";
 			<link rel="stylesheet" href="/templates/<?= $this->template ?>/css/template-ie.min.css">
 		<![endif]-->
 	<?php endif; ?>
-
+	
 	<script src="/templates/<?= $this->template ?>/js/libs/modernizr-1.7.min.js"></script>
 	<?php if ($typekit): ?>
 		<!-- load typekit -->

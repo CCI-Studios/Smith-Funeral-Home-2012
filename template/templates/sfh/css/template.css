@@ -140,7 +140,7 @@ code,
 kbd,
 samp {
   font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
+  _font-family: "courier new", monospace;
   font-size: 1em; }
 
 /*
@@ -502,7 +502,7 @@ button {
 input,
 textarea {
   padding: 4px;
-  border: 1px solid lightGrey; }
+  border: 1px solid lightgrey; }
 
 input[type="submit"],
 div.itemCommentsForm form input#submitCommentButton {
@@ -532,7 +532,7 @@ div.itemComments {
     div.itemComments ul.itemCommentsList li.authorResponse p {
       margin-top: 0; }
   div.itemComments ul.itemCommentsList span.commentDate {
-    border-left: 1px solid #CCC;
+    border-left: 1px solid #cccccc;
     border-right: none !important;
     padding: 0 0 0 4px !important; }
   div.itemComments form input.inputbox,
@@ -762,7 +762,7 @@ body {
 
 #footer-menu {
   background-color: #f1ebd4;
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px solid white; }
 
 #footer {
   background: url("../images/bg_footer.png") top center repeat-x;
@@ -1129,7 +1129,7 @@ div.itemView {
   border: 0; }
   div.itemView h2 {
     font-size: 16px;
-    margin: 1.5em 0 .5em; }
+    margin: 1.5em 0 0.5em; }
 
 div.itemList {
   padding: 22px 0 1em 0; }
@@ -1137,7 +1137,7 @@ div.itemList {
 div.catItemIntroText {
   padding-top: 0; }
   div.catItemIntroText p {
-    margin: .5em 0; }
+    margin: 0.5em 0; }
 
 div.catItemImageBlock,
 div.itemImageBlock {
@@ -1260,7 +1260,7 @@ ul.sigProContainer {
     width: 73.958333333%; }
 
   .module.media-block {
-    margin: 0 0 0 3.645833333%; }
+    margin: 0 0 0 3.64583%; }
     .module.media-block:first-child {
       margin-left: 0; }
     .home .module.media-block {
