@@ -1173,6 +1173,12 @@ span.itemImage img {
 dt.result-title a {
   color: #143356; }
 
+.category tr {
+  margin: 1em 0;
+  display: block; }
+  .category tr:first-child {
+    margin-top: 0; }
+
 .accordian-title {
   cursor: pointer;
   margin-bottom: 0; }

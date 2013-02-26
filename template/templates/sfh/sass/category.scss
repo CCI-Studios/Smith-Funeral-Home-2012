@@ -80,6 +80,14 @@ dt.result-title {
 	}
 }
 
+.category tr {
+	margin: 1em 0;
+	display: block;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
 //services
 
 .accordian-title {
