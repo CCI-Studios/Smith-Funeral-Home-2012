@@ -1,18 +1,12 @@
 window.addEvent('domready', function() {
-	$$('div.items-leading > div').each(function(dl) {
-		var dts = dl.getElements('.accordian-title'),
-			dds = dl.getElements('.accordian-content'),
-			acc,
-			span = new Element('span', { 'class': 'arrow' });
+	var container = $$('div.items-leading'),
+		titles = container.getElements('.accordian-title'),
+		contents = container.getElements('.accordian-content'),
+		acc = null;
 
-		dts.each(function(dt) {
-			span.clone().inject(dt);
-		});
-
-		acc = new Fx.Accordion(dts, dds, {
-			display: -1,
-			alwaysHide: true,
-			duration: 300
-		});	
+	acc = new Fx.Accordion(titles, contents, {
+		display: -1,
+		//alwaysHide: true,
+		duration: 300
 	});
 });
